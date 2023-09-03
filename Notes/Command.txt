@@ -1,0 +1,31 @@
+Commands
+
+npm install -g @angular/cli
+
+npm install -g npm@10.0.0
+
+set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Get-ExecutionPolicy
+Get-ExecutionPolicy -list
+npm install -g typescript --save-dev
+
+npx tsc first_code.ts ###Code compile
+
+
+
+
+npx tsc --init #### Create config file
+
+
+#create new project
+ng new ProjectName
+
+
+# run the application
+ng serve --> 
+npm run ->in it call ng serve
+
+creating component
+
+ng generate component post
+

@@ -1,0 +1,95 @@
+
+#Angular project file system stucture
+
+
+## editor setting -> setting for code editor
+## angular.json => file include all project configutaion , number of project; server build , etc configuration
+## Package.json-> all dependent packages
+## tsconfig=> application configuration file master
+###### app.json=>application config
+###### spec.spec.json=> for testing
+
+Conpilation=> transforming code to machine code : 
+	Just in time compilation
+	Ahead of time => compile on server
+
+//JIT
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+//AOT
+import { platformBrowser } from '@angular/platform-browser';
+
+
+JIT Sample
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+
+
+Change detection twice
+
+
+
+Import and export module
+compoenet as basic html tags
+
+angular.json	
+	-->tsconfig
+	--> src/main.ts +src/index.html
+		-->main.ts
+		-->app.module.ts
+			-->appModule @ngModule (mandatory:import browsermodule
+						(declares=>appcomponent, other component
+			-->BrowerModule -> now bootstrap component
+				--> appComponent.ts @component (mandatory :selector, template , others: template url styleurl
+				--> selector mention the tag in index.html 
+
+			-->provider :services use in project
+
+assets-> static content like image
+pollyfills-> contain item not supported by browsers
+
+bind class(Controller) and HTML	(view)	
+1-Interpolations:
+expression :
+	single line of code to single value
+	2+2
+	100===100
+
+var a, functions and conditional expression are not expression
+
+expression are write as {{}}
+{{}} is also use for string Interpolation
+
+this expression goes in component.html or call MVC that how copponent interact with html file
+
+
+2-Property binding:
+<img scr=""> to <img [scr]="property name">
+
+3 event binding
+<input (keyup)="changeImage($event)" [value]="imgURL"> () eventbinding 
+# for accesting value by type assertion
+changeImage(e:keyboardevent){
+ this.imgUrl=(e.target as HTMLInputElemrnt).value
+}
+Input alias
+@input('img') where img is alias
+Alias to be avoided
+
+@output 
+
+EventEmitter
+<img [src]="" (click)="imgSelected.emit(postimg)">
+
+class
+{
+@outputimgselectod= new EvitEmitter<string>()
+}
+
+bind this event in parent ()="method($value)"
+

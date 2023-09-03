@@ -1,0 +1,206 @@
+
+let myName: string = "Alice";
+
+function printName(obj: { first: string; last?: string }) {
+  // Error - might crash if 'obj.last' wasn't provided!
+  console.log(obj.last.toUpperCase());
+'obj.last' is possibly 'undefined'.
+  if (obj.last !== undefined) {
+    // OK
+    console.log(obj.last.toUpperCase());
+  }
+ 
+  // A safe alternative using modern JavaScript syntax:
+  console.log(obj.last?.toUpperCase());
+}
+
+Union
+function printId(id: number | string) {
+  if (typeof id === "string") {
+    // In this branch, id is of type 'string'
+    console.log(id.toUpperCase());
+  } else {
+    // Here, id is of type 'number'
+    console.log(id);
+  }
+}
+
+Type Alias
+type Point = {
+  x: number;
+  y: number;
+};
+ 
+// Exactly the same as the earlier example
+function printCoord(pt: Point) {
+  console.log("The coordinate's x value is " + pt.x);
+  console.log("The coordinate's y value is " + pt.y);
+}
+ 
+printCoord({ x: 100, y: 100 });
+
+interface
+
+interface Point {
+  x: number;
+  y: number;
+}
+ 
+function printCoord(pt: Point) {
+  console.log("The coordinate's x value is " + pt.x);
+  console.log("The coordinate's y value is " + pt.y);
+}
+ 
+printCoord({ x: 100, y: 100 });
+
+
+#Array
+
+
+let items :string[]=["Anb","ggdgd"]
+
+#object
+
+
+
+const account:{
+    name:string,
+    balance:number
+    }=
+    {
+     name:'Luis',
+     balance:10
+    };
+	
+	
+let account:{}[];
+
+
+# Via Interface
+interface IAccount{
+name:string,
+balance:number,
+status?:string
+};
+
+
+
+// object from interface
+const account:IAccount={
+    name :'Luis',
+    balance:10
+};
+
+let accounts:IAccount[];
+
+
+
+
+function addValue(num1:number, num2:number):number {
+    return num1 + num2;
+}
+
+const abc ={
+    name :'Luis',
+    balance:10
+};
+
+
+interface IAccount{
+name:string,
+balance:number,
+status?:string
+};
+
+
+
+// object from interface
+const account:IAccount={
+    name :'Luis',
+    balance:10
+};
+
+let accounts:IAccount[];
+
+// Class
+class InverstmentAccount implements IAccount{
+    name: any;
+    balance;
+    constructor(public _name, public _balance){
+
+    }
+}
+
+
+
+// Generics
+
+class ValuesCollection<T>{
+    private data:T[] = []
+
+    add(item:T)
+    {
+        this.data.push(item);
+    }
+
+    remove()
+    {
+        this.data.shift();
+    }
+}
+
+const stringValue= new ValuesCollection<string>();
+stringValue.add("test")
+
+#todo
+//HOC
+//Composition
+//Closures
+//Maxin
+// TO add Decorator to config file
+//"experimentalDecorators": true,   
+
+
+
+function MenuItem(value){
+    return class extends value{
+        id="abc"
+    }
+}
+
+@MenuItem
+class Pizza{
+    id:string;
+}
+
+@MenuItem
+class Hamburger{
+    id:string;
+}
+console.log(new Pizza().id);
+
+
+
+#option 2
+
+function MenuItem(itemId:string){
+    return function(value){
+    return class extends value{
+        id=itemId
+    }
+}
+}
+
+@MenuItem("abc")
+class Pizza{
+    id:string;
+}
+
+@MenuItem("123")
+class Hamburger{
+    id:string;
+}
+console.log(new Pizza().id);
+
+
+
