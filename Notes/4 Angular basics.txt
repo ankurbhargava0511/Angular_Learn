@@ -1,0 +1,113 @@
+1-Interpolations:
+expression :
+	single line of code to single value
+	2+2
+	100===100
+
+var a, functions and conditional expression are not expression
+
+expression are write as {{}}
+{{}} is also use for string Interpolation
+
+this expression goes in component.html or call MVC that how copponent interact with html file
+
+
+2-Property binding:
+<img scr=""> to <img [scr]="property name">
+
+3 event binding
+<input (keyup)="changeImage($event)" [value]="imgURL"> () eventbinding 
+# for accesting value by type assertion
+changeImage(e:keyboardevent){
+ this.imgUrl=(e.target as HTMLInputElemrnt).value
+}
+Input alias
+@input('img') where img is alias
+Alias to be avoided
+
+@output 
+
+EventEmitter
+<img [src]="" (click)="imgSelected.emit(postimg)">
+
+class
+{
+@outputimgselectod= new EvitEmitter<string>()
+}
+
+bind this event in parent ()="method($value)"
+
+content projection
+	parent component html:
+		<app-component>
+		<P></p>
+		</app-coponent>
+
+	child component
+		<ng-content>
+
+
+life cycle hook
+	constructor
+	ngOnChange
+	ngOnInit
+	ngDoCheck   run twice
+
+content can be 
+	view-> in the template file
+	content -> projected content from parent 
+ngafterContentInit
+ngafterContentcheck
+ngafterViewInit
+ngafterViewchecked
+
+ngOnDestroy
+
+:host css
+
+
+
+
+Pipe=>function for transforing value -> (it doesnot change the original value just transform 
+original value-> pipe-> new value 
+Aync pipe
+datepipe
+currencypipe
+
+they are in browsermodule, commonModule
+
+<p>Hellow {{name|titlecase}}</p>
+<p>Hellow {{mydate|date:'MMMM d' }}</p> // Pipe with parameter, you can use predifine formate
+	
+<p>Hellow {{cost|currency:'' }}</p>
+
+decimal pipe 1.2-5
+json pipe for development
+
+
+#directive for content transform
+Attribute deriveive ->apperence
+Structural directive
+
+
+ngClass= Attribute directive ,
+
+style .blue class
+add property in class (component
+
+
+
+temple ->
+
+button -> click = change blueclass flag and then add the style class as propery binding
+
+
+structural directive
+
+<ng-template> it will not be display
+
+ngIF
+
+[ngIf]
+*ngIf
+
