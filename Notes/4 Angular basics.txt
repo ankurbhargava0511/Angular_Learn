@@ -111,3 +111,193 @@ ngIF
 [ngIf]
 *ngIf
 
+*ngFor Syntax
+
+*ngFor="let imageof images;let i=index"
+
+create module
+Browser module to be only in root module
+
+
+
+Type of component
+	Single use
+	reuseable 
+
+Multi Slot Content projection
+
+Services
+
+@injectable
+providedIn:root
+
+add this to provided in module
+
+$event.preventDefault() or you can return false
+
+services are singletons
+
+
+@contentChildred -> find 
+
+
+
+form
+Validation
+feedback
+dynamic Fields
+
+
+Form can be created by two ways
+reactive
+template
+register for reactiveForm Module
+
+Form Group
+
+
+form control= control
+formcontrolname will find the form under form group
+
+for validation
+
+ng container=>
+ng template+>
+
+
+
+
+
+validation
+required
+minlength
+maxlength
+email
+min
+max
+pattern
+
+
+
+input masking-
+
+
+#variable ngmodel directive
+
+
+rxjs
+
+Imperative vs declarative programming
+
+
+Creation operator
+
+pipeable operator
+
+--timing operator
+---interval
+---timer
+
+
+
+--formevent(document, 'click')
+
+--of(1,2,3,4,5) - it sync  -- it complete complete phase
+
+Flattening
+from() it will loop and flattern
+
+
+
+pippeable
+
+map
+filter
+reduce
+take
+scan => same as resuce but show scan accumelated value
+tap
+
+flatterning
+merge map
+switch map
+concatmap
+exhaustMap
+
+delay operator
+
+Services 
+
+Interface
+type safety in 
+
+
+use $ at the end of observable property
+
+!! what it do
+
+ngif else
+
+static class
+
+Factory function
+
+Async validator
+
+routing
+
+history.push(
+
+
+path parameter
+query parameter
+route guard
+
+
+
+References
+snapshots -> immuta
+
+
+Form disable/enable (form control
+
+
+
+
+
+
+
+
+
+
+behaviourSubject observable
+combilelatest 
+
+
+
+
+Karma -> create server
+Jasmine -> framework for testing
+
+Testing 
+Describe(Component ,()=>{
+	it('',()=>{
+
+expect(true).toBetruthy()
+});
+})
+
+Let fixture :componentfixture of type Component
+before each( testbed.con(declare [component])/compilecomponent)
+
+before each => fixture = testbead.createcompoenet
+coponent= fixture.componentInstance
+fixture.detectchange();
+
+
+HOstcompoenet
+
+
+
+
+

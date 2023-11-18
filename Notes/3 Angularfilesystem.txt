@@ -44,11 +44,24 @@ angular.json
 		-->app.module.ts
 			-->appModule @ngModule (mandatory:import browsermodule
 						(declares=>appcomponent, other component
+						(exports : what module wants to export)
 			-->BrowerModule -> now bootstrap component
 				--> appComponent.ts @component (mandatory :selector, template , others: template url styleurl
 				--> selector mention the tag in index.html 
 
 			-->provider :services use in project
+			
+			SubModule
+				->Declare
+				->import
+				->Export
+				-Provider(services)
+			@component (mandatory :
+				selector, 
+				template , others: 
+				template url 
+				styleurl
+				provider
 
 assets-> static content like image
 pollyfills-> contain item not supported by browsers
@@ -56,4 +69,16 @@ pollyfills-> contain item not supported by browsers
 bind class(Controller) and HTML	(view)	
 
 
+Create module and o be added in root module under import section
 
+
+base hread="/" under index.html
+
+
+route => path+component
+routeroutlet
+
+router link
+router link active
+routerlinkactiveoption
+partial match

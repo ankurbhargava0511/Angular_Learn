@@ -25,7 +25,31 @@ ng new ProjectName
 ng serve --> 
 npm run ->in it call ng serve
 
-creating component
-
+#creating component
 ng generate component post
+ng g c post=> short hand
+
+#creating module
+ng generate module user
+
+#module under module
+ng generate component user/auth-modal
+
+#Services
+ng generate service services/modal
+Injectable
+
+
+ng add @angular/fire   same as npm install
+ng g environment to create environment file
+
+
+ng  g class x/v
+ng g module Vedie --routing
+ng g directive name
+
+
+uuid module
+
+
 
